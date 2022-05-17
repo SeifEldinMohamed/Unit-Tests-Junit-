@@ -1,7 +1,6 @@
 package com.seif.unittest
 
 import com.google.common.truth.Truth.assertThat
-import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -21,7 +20,7 @@ class RegistrationUtilTest(
             arrayOf("", "123", "123", "empty userName, ValidPassword, ConfirmedPassword"),
             arrayOf("Mohamed", "123", "123", "repeated userName, ValidPassword, ConfirmedPassword"),
             arrayOf("Seif", "", "", "Valid userName, Password empty, ConfirmedPassword"),
-            arrayOf("Seif", "12", "12", "Valid userName, InvalidPassword, ConfirmedPassword"),
+            arrayOf("Seif", " ", " ", "Valid userName, InvalidPassword, ConfirmedPassword"),
             arrayOf("Seif", "1234", "123", "Valid userName, ValidPassword, Wrong ConfirmedPassword"),
             // Registration is Valid
             //arrayOf("Seif", "123", "123", "Valid userName, ValidPassword, ConfirmedPassword")

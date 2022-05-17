@@ -21,8 +21,12 @@ object RegistrationUtil {
             return false
         else if (existingList.contains(userName))
             return false
-        else if (password.length<3)
+//        else if (password.length<3){
+//            return false
+//        }
+        else if (password.count{it.isDigit()}<3){
             return false
+        } // id like the upper elseif but this handles if user enter empty spaces
         else return password == confirmedPassword
 
     }
